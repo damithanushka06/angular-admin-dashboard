@@ -1,12 +1,21 @@
 import { Component } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
+import {HeaderComponent} from './shared/components/header/header.component';
+import {SidebarComponent} from './shared/components/sidebar/sidebar.component';
+import {NgIf} from '@angular/common';
 
 @Component({
   selector: 'app-root',
-  imports: [RouterOutlet],
   templateUrl: './app.component.html',
-  styleUrl: './app.component.scss'
+  styleUrls: ['./app.component.scss'],
+  imports: [HeaderComponent, SidebarComponent, RouterOutlet, NgIf],
+  standalone: true
 })
 export class AppComponent {
   title = 'angular-admin-dashboard';
+  isSidebarVisible = true;
+
+  toggleSidebar() {
+    this.isSidebarVisible = !this.isSidebarVisible;
+  }
 }
