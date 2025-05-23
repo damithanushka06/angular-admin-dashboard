@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import {RouterLink, RouterLinkActive} from '@angular/router';
+import {Router, RouterLink, RouterLinkActive} from '@angular/router';
 import {NgForOf} from '@angular/common';
 
 @Component({
@@ -20,5 +20,11 @@ export class SidebarComponent {
     { label: 'Settings', route: '/settings' },
   ];
 
+  constructor(private router: Router) {}
+
+  onMenuClick(item: { label: string; route: string }) {
+    console.log('Clicked:', item.label);
+    this.router.navigate([item.route]).then(r => {});
+  }
 
 }
