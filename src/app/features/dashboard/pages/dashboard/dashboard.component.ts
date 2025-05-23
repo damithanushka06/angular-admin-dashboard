@@ -1,11 +1,18 @@
 import { Component } from '@angular/core';
+import {RouterModule, Routes} from '@angular/router';
 
 @Component({
+  standalone: true,
+  imports: [RouterModule],
   selector: 'app-dashboard',
-  imports: [],
   templateUrl: './dashboard.component.html',
-  styleUrl: './dashboard.component.scss'
+
+  styleUrls: ['./dashboard.component.scss'],
+  // note the plural and array,
+
 })
+
+
 export class DashboardComponent {
 
 }

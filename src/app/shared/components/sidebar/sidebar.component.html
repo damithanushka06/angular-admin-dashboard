@@ -1,7 +1,7 @@
 <nav class="sidebar">
   <ul>
-    <li *ngFor="let item of menuItems" routerLinkActive="active">
-      <a [routerLink]="item.route">{{ item.label }}</a>
+    <li *ngFor="let item of menuItems" (click)="onMenuClick(item)">
+      <a [routerLink]="item.route" routerLinkActive="active">{{ item.label }}</a>
     </li>
   </ul>
 </nav>
