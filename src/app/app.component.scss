@@ -1,17 +1,22 @@
-.main-layout {
+.app-body {
   display: flex;
-  height: 100vh;
+  height: calc(100vh - 80px); /* adjust 60px if your header height is different */
 }
 
 app-sidebar {
-  width: 250px;
-  background-color: #2c3e50;
-  color: white;
+  width: 250px; /* sidebar width */
+  background-color: #222;
+  /* add other sidebar styles */
 }
 
-.content {
+main {
   flex-grow: 1;
   padding: 20px;
-  background-color: #ecf0f1;
+  background-color: #f0f0f0;
   overflow-y: auto;
+  transition: width 0.3s ease;
+}
+
+main.full-width {
+  width: 100%;
 }
