@@ -1,5 +1,7 @@
 <app-header (sidebarToggle)="toggleSidebar()"></app-header>
-<app-sidebar *ngIf="isSidebarVisible"></app-sidebar>
-<main [class.full-width]="!isSidebarVisible">
-  <router-outlet></router-outlet>
-</main>
+<div class="app-body">
+  <app-sidebar *ngIf="isSidebarVisible"></app-sidebar>
+  <main [class.full-width]="!isSidebarVisible">
+    <router-outlet></router-outlet>
+  </main>
+</div>
