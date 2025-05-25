@@ -1,1 +1,28 @@
-<p>dashboard works!</p>
+<div class="dashboard-container">
+  <h1>Dashboard</h1>
+
+  <section class="cards">
+    <div class="card" *ngFor="let card of cards">
+      <div class="icon">{{ card.icon }}</div>
+      <div class="info">
+        <h3>{{ card.title }}</h3>
+        <p>{{ card.value }}</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="chart">
+    <h2>Performance Overview</h2>
+    <div class="chart-placeholder">
+      <!-- Replace with real chart component -->
+      Chart goes here
+    </div>
+  </section>
+
+  <section class="activity">
+    <h2>Recent Activity</h2>
+    <ul>
+      <li *ngFor="let activity of recentActivities">{{ activity }}</li>
+    </ul>
+  </section>
+</div>
