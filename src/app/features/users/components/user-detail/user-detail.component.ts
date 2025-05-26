@@ -1,9 +1,12 @@
 import { Component } from '@angular/core';
 import {ActivatedRoute} from '@angular/router';
+import {NgIf} from '@angular/common';
 
 @Component({
   selector: 'app-user-detail',
-  imports: [],
+  imports: [
+    NgIf
+  ],
   templateUrl: './user-detail.component.html',
   standalone: true,
   styleUrl: './user-detail.component.scss'

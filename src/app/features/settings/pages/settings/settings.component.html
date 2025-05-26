@@ -1,1 +1,40 @@
-<p>settings works!</p>
+<div class="settings-container">
+  <h2>User Settings</h2>
+
+  <form (ngSubmit)="saveSettings()" #settingsForm="ngForm">
+    <div class="form-group">
+      <label for="username">Username</label>
+      <input
+        type="text"
+        id="username"
+        [(ngModel)]="profile.username"
+        name="username"
+        required
+      />
+    </div>
+
+    <div class="form-group">
+      <label for="email">Email</label>
+      <input
+        type="email"
+        id="email"
+        [(ngModel)]="profile.email"
+        name="email"
+        required
+      />
+    </div>
+
+    <div class="form-group checkbox">
+      <label>
+        <input
+          type="checkbox"
+          [(ngModel)]="profile.notifications"
+          name="notifications"
+        />
+        Enable Notifications
+      </label>
+    </div>
+
+    <button type="submit" [disabled]="settingsForm.invalid">Save</button>
+  </form>
+</div>
